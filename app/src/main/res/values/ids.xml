@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnUp" type="id" />
+    <item name="btnDown" type="id" />
+    <item name="btnRight" type="id" />
+    <item name="webView" type="id" />
+    <item name="btnLeft" type="id" />
+</resources>
