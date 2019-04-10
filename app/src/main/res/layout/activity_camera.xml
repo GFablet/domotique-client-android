@@ -4,12 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cameras.PilotageCamerasActivity">
-
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="715dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="8dp" />
+    tools:context=".cameras.CameraActivity">
 
 </android.support.constraint.ConstraintLayout>
