@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/logoprojetalpha" />
 
     <Button
-        android:id="@+id/buttonExterieur"
+        android:id="@+id/buttonPilotageMaison"
         android:layout_width="113dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
@@ -45,7 +45,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonExterieur" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPilotageMaison" />
 
     <Button
         android:id="@+id/buttonChambre2"
@@ -108,7 +108,7 @@
         android:background="@drawable/gradientbutton"
         android:text="Salon"
         android:textColor="@android:color/white"
-        app:layout_constraintStart_toEndOf="@+id/buttonExterieur"
+        app:layout_constraintStart_toEndOf="@+id/buttonPilotageMaison"
         app:layout_constraintTop_toBottomOf="@+id/buttonGarageNord" />
 
     <Button
