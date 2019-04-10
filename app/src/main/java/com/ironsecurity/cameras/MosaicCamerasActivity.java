@@ -12,4 +12,8 @@ public class MosaicCamerasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mosaic_cameras);
     }
+
+
+
+
 }
