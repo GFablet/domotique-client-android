@@ -29,5 +29,11 @@ public class RoomActivity extends AppCompatActivity {
                 MainActivity.clientThread.sendMessage("operateOneEquipment/"+v.getTag().toString()+"/0");
             }
         });
+        buttonVolet1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.clientThread.sendMessage("operateOneEquipment/"+v.getTag().toString()+"/0");
+            }
+        });
     }
 }

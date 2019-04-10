@@ -22,14 +22,16 @@
         app:srcCompat="@drawable/logoprojetalpha" />
 
     <Button
-        android:id="@+id/buttonPilotageMaison"
+        android:id="@+id/buttonSalleAManger"
         android:layout_width="113dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/gradientbutton"
         android:text="Salle à manger"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSalon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGarageEst" />
 
@@ -44,8 +46,9 @@
         android:text="WC"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPilotageMaison" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSalleAManger" />
 
     <Button
         android:id="@+id/buttonChambre2"
@@ -65,14 +68,12 @@
         android:id="@+id/buttonVestibule"
         android:layout_width="113dp"
         android:layout_height="70dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/gradientbutton"
         android:text="Vestibule"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonSalon"
         app:layout_constraintTop_toBottomOf="@+id/buttonHallNord" />
 
     <Button
@@ -103,12 +104,12 @@
         android:id="@+id/buttonSalon"
         android:layout_width="113dp"
         android:layout_height="70dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/gradientbutton"
         android:text="Salon"
         android:textColor="@android:color/white"
-        app:layout_constraintStart_toEndOf="@+id/buttonPilotageMaison"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVestibule"
         app:layout_constraintTop_toBottomOf="@+id/buttonGarageNord" />
 
     <Button
