@@ -25,52 +25,7 @@ public class PilotageCamerasActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.choixcamera);
 
-            Cam1 = (Button) findViewById(R.id.button);
-            Cam2 = (Button) findViewById(R.id.button);
-            Cam3 = (Button) findViewById(R.id.button);
-            Cam4 = (Button) findViewById(R.id.button);
-
-            Cam1.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    Intent i = new Intent( Camera.this, Camera.class);
-                    startActivity(i);
-                }
-            });
-
-            Cam2.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    Intent i = new Intent( Camera.this, Camera.class);
-                    startActivity(i);
-                }
-            });
-
-            Cam3.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    Intent i = new Intent( Camera.this, Camera.class);
-                    startActivity(i);
-                }
-            });
-
-            Cam4.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-                    Intent i = new Intent( Camera.this, Camera.class);
-                    startActivity(i);
-                }
-            });
 
         }
     }

@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/logoprojetalpha" />
 
     <Button
-        android:id="@+id/buttonSalleAManger"
+        android:id="@+id/buttonExterieur"
         android:layout_width="131dp"
         android:layout_height="125dp"
         android:layout_marginStart="50dp"
@@ -30,6 +30,7 @@
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="345dp"
         android:background="@drawable/gradientbutton"
+        android:tag="1"
         android:text="Extérieur"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,16 +46,16 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="345dp"
         android:background="@drawable/gradientbutton"
+        android:tag="2"
         android:text="Rez de chaussée"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonSalleAManger"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/buttonExterieur"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/buttonRDC3"
+        android:id="@+id/button1erEtage"
         android:layout_width="131dp"
         android:layout_height="125dp"
         android:layout_marginStart="50dp"
@@ -62,12 +63,13 @@
         android:layout_marginEnd="208dp"
         android:layout_marginBottom="188dp"
         android:background="@drawable/gradientbutton"
+        android:tag="3"
         android:text="Premier étage"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSalleAManger"
+        app:layout_constraintTop_toBottomOf="@+id/buttonExterieur"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>
