@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
 
+import com.ironsecurity.cameras.MosaicCamerasActivity;
 import com.ironsecurity.operate_house.FloorSelectionActivity;
 
 public class MainActivity extends AppCompatActivity{
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity{
         }
         private void changeActivity()
         {
-                Intent intent = new Intent(this, FloorSelectionActivity.class);
+                Intent intent = new Intent(this, MosaicCamerasActivity.class);
                 startActivity(intent);
         }
 }

@@ -15,28 +15,28 @@
             <WebView
                 android:id="@+id/camera1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_weight="@android:integer/config_longAnimTime"
-                android:foreground="#255" />
+                />
 
             <WebView
                 android:id="@+id/camera2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_weight="@android:integer/config_longAnimTime"
                 android:foreground="#152" />
 
             <WebView
                 android:id="@+id/camera3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_weight="@android:integer/config_longAnimTime"
                 android:foreground="#240" />
 
             <WebView
                 android:id="@+id/camera4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_weight="@android:integer/config_longAnimTime"
                 android:foreground="#110" />
         </LinearLayout>
