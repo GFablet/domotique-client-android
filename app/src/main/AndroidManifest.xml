@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".cameras.CameraActivity"></activity>
+        <activity android:name=".scenarios.CreateScenarioActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".cameras.CameraActivity" />
         <activity android:name=".cameras.MosaicCamerasActivity" />
         <activity android:name=".scenarios.ScenariosActivity" />
         <activity android:name=".cameras.PilotageCamerasActivity" />

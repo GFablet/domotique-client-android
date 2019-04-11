@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".cameras.CameraActivity">
+    tools:context=".operate_house.FloorSelectionActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,18 +22,16 @@
         app:srcCompat="@drawable/logoprojetalpha" />
 
     <Button
-        android:id="@+id/buttonCamera1"
+        android:id="@+id/buttonPilotageMaison"
         android:layout_width="131dp"
-        android:layout_height="125dp"
+        android:layout_height="86dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="345dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="49dp"
         android:background="@drawable/gradientbutton"
         android:tag="1"
-        android:text="Caméra 1"
+        android:text="Pilotage maison"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -41,51 +39,59 @@
     <Button
         android:id="@+id/buttonRdc"
         android:layout_width="131dp"
-        android:layout_height="125dp"
+        android:layout_height="86dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="345dp"
         android:background="@drawable/gradientbutton"
         android:tag="2"
-        android:text="Caméra 2"
+        android:text="Scénarios domotiques"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCamera1"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button1erEtage"
+        android:id="@+id/buttonMosaiqueCameras"
         android:layout_width="131dp"
-        android:layout_height="125dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/gradientbutton"
+        android:tag="3"
+        android:text="Mosaïque caméras"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRdc" />
+
+    <Button
+        android:id="@+id/buttonStatistiques"
+        android:layout_width="131dp"
+        android:layout_height="86dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="208dp"
-        android:layout_marginBottom="188dp"
         android:background="@drawable/gradientbutton"
         android:tag="3"
-        android:text="Caméra 3"
+        android:text="Statistiques"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRdc"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPilotageCameras" />
 
     <Button
-        android:id="@+id/buttonCamera4"
+        android:id="@+id/buttonPilotageCameras"
         android:layout_width="131dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="39dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="45dp"
         android:background="@drawable/gradientbutton"
         android:tag="3"
-        android:text="Caméra 4"
+        android:text="Pilotage caméras"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1erEtage"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRdc" />
-
+        app:layout_constraintEnd_toStartOf="@+id/buttonMosaiqueCameras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPilotageMaison" />
 </android.support.constraint.ConstraintLayout>
