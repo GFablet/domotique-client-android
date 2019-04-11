@@ -8,12 +8,10 @@ public class User {
     private int id;
     private String email;
     private  String password;
-    private int account;
 
-    public User(String email, String password, int account) {
+    public User(String email, String password) {
         this.email = email;
         this.password = password;
-        this.account = account;
     }
 
     public int getId() {
@@ -40,21 +38,12 @@ public class User {
         this.password = password;
     }
 
-    public int getAccount() {
-        return account;
-    }
-
-    public void setAccount(int account) {
-        this.account = account;
-    }
-
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", account='" + account + '\'' +
                 '}';
     }
 }

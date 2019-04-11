@@ -10,6 +10,7 @@ import com.ironsecurity.R;
 
 public class PilotageCamerasActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

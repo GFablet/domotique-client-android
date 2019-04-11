@@ -26,7 +26,7 @@
         android:layout_width="218dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="241dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.248"
@@ -39,13 +39,43 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="237dp"
+        android:layout_marginTop="216dp"
         android:background="@drawable/ic_icon"
         android:contentDescription="testt"
         android:onClick="showPopup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.991"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewScenario"
+        android:layout_width="291dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:gravity="top"
+        android:singleLine="false"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choix" />
+
+    <Button
+        android:id="@+id/buttonEnvoieScenario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="162dp"
+        android:background="@drawable/gradientbutton"
+        android:text="Envoyer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScenario" />
 
 </android.support.constraint.ConstraintLayout>

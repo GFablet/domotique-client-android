@@ -14,17 +14,21 @@ public class RoomSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        int layoutID = intent.getIntExtra("layout", R.layout.activity_room_selection);
+        int layoutID = intent.getIntExtra("layout", R.layout.work_in_progress);
         setContentView(layoutID);
+        //TODO Adapter cette partie pour tous les layouts
+        if(layoutID == R.layout.activity_rdc)
+        {
+            Button buttonSalon = findViewById(R.id.buttonSalon);
 
-        Button buttonSalon = findViewById(R.id.buttonSalon);
+            buttonSalon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(RoomSelectionActivity.this, RoomActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
 
-        buttonSalon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RoomSelectionActivity.this, RoomActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

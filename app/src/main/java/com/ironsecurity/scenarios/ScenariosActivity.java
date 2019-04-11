@@ -7,27 +7,56 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ironsecurity.R;
 
+import java.util.HashMap;
+
 public class ScenariosActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener, AdapterView.OnItemSelectedListener {
 
+    private static String SCENARIO_ID;
+
     Spinner spinner;
+    HashMap<String, String> listeScenarios;
+    Button envoieScenario;
+    TextView textViewScenario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scenarios);
 
+        listeScenarios = new HashMap<>();
+        listeScenarios.put("Scenario1", "allumer lumiere1 de (cuisine;rdc) pendant 10 secondes\n" +
+                                        "eteindre lumiere1 de (cuisine;rdc)\n" +
+                                        "allumer lumiere1 de (hall_nord;rdc) pendant 2 secondes\n" +
+                                        "eteindre lumiere1 de (hall_nord;rdc)\n" +
+                                        "allumer lumiere1 de (salon;rdc)\n" +
+                                        "allumer lumiere2 de (salon;rdc) ...");
 
-        spinner = (Spinner) findViewById(R.id.choix);
+        textViewScenario = findViewById(R.id.textViewScenario);
+        spinner = findViewById(R.id.choix);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ChoixScenar, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        envoieScenario = findViewById(R.id.buttonEnvoieScenario);
+        envoieScenario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!textViewScenario.equals(null))
+                {
+
+                }
+            }
+        });
+
 
     }
 
@@ -54,8 +83,9 @@ public class ScenariosActivity extends AppCompatActivity implements PopupMenu.On
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        SCENARIO_ID = parent.getItemAtPosition(position).toString().replaceAll("[a-zA-Z]","");
+        Toast.makeText(this, SCENARIO_ID, Toast.LENGTH_SHORT).show();
+        textViewScenario.setText(listeScenarios.get(parent.getItemAtPosition(position).toString()));
     }
 
     @Override

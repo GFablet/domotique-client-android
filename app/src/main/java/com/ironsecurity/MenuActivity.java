@@ -37,7 +37,20 @@ public class MenuActivity extends AppCompatActivity {
         int account = mainIntent.getIntExtra("account", 3);
         //On met en place les différents intent de changement d'activité
         Intent intentMaison = new Intent(MenuActivity.this, FloorSelectionActivity.class);
-        changeActivityOnClick(buttonMaison, intentMaison);
+        Intent intentScenarios = new Intent(MenuActivity.this, ScenariosActivity.class);
+        Intent intentMosaique = new Intent(MenuActivity.this, MosaicCamerasActivity.class);
+        Intent intentCamera = new Intent(MenuActivity.this, CameraActivity.class);
+        Intent intentStatistiques = new Intent(MenuActivity.this, StatistiquesActivity.class);
+
+        if(account != 3)
+        {
+            changeActivityOnClick(buttonMaison, intentMaison);
+            changeActivityOnClick(buttonScenarios, intentScenarios);
+            changeActivityOnClick(buttonCameras, intentCamera);
+            changeActivityOnClick(buttonStatistiques, intentStatistiques);
+        }
+
+        changeActivityOnClick(buttonMosaique, intentMosaique);
 
 
         /*
@@ -47,7 +60,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, FloorSelectionActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         buttonScenarios.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +92,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, ScenariosActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     private void changeActivityOnClick(Button button, final Intent intent)

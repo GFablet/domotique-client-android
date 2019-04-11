@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 String username= editTextUsername.getText().toString();
                 String password= editTextPassword.getText().toString();
                 final DatabaseHelper dbHelper = new DatabaseHelper(this);
-                dbHelper.addUser(new User("Admin", "admin", 1));
-                dbHelper.addUser(new User("Utilisateur", "motdepasse", 2));
-                dbHelper.addUser(new User("Surveillance", "motdepasse", 3));
+                dbHelper.addUser(new User("Admin", "admin"));
+                dbHelper.addUser(new User("Utilisateur", "motdepasse"));
+                dbHelper.addUser(new User("Surveillance", "motdepasse"));
 
 
                 if(switchRememberMe.isChecked())
@@ -107,7 +107,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 if(user != null)
                 {
                     Intent i = new Intent(this, MenuActivity.class); // here the nextpage to be loaded is specified
-                    i.putExtra("account", user.getAccount());
+                    //TODO Remplacer par une variable de compte utilisateur
+                    i.putExtra("account", user.getId());
                     startActivity(i);
                 }
                 else

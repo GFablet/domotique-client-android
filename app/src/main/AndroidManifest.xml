@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".scenarios.CreateScenarioActivity"></activity>
+        <activity android:name=".StatistiquesActivity"></activity>
+        <activity android:name=".scenarios.CreateScenarioActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".cameras.CameraActivity" />
         <activity android:name=".cameras.MosaicCamerasActivity" />
