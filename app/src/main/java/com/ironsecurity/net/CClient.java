@@ -15,6 +15,8 @@ public class CClient implements Runnable {
     private static final int PORT = 45000; // Valeur arbitraire
     private static final String ADDR_IP = "192.168.56.1"; // Addresse ip du serveur
 
+
+
     private Socket socket;
     private BufferedReader input;
 
@@ -66,6 +68,27 @@ public class CClient implements Runnable {
                 }
             }
         }).start();
+    }
+
+    public void askServer(final String message) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (null != socket) {
+                        PrintWriter out = new PrintWriter(new BufferedWriter(
+                                new OutputStreamWriter(socket.getOutputStream())),
+                                true);
+                        out.println(message);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                        final String RESPONSE = in.readLine();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        //return RESPONSE;
     }
 
 }

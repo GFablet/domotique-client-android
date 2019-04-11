@@ -35,15 +35,18 @@ public class RoomActivity extends AppCompatActivity {
         for(int lumiere : lumieresID)
         {
             CheckBox checkBox = findViewById(lumiere);
+            //if(MainActivity.clientThread)
 
             checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if(isChecked)
                     {
-                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " Checked", Toast.LENGTH_SHORT).show();
+                        MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/1");
+                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumée", Toast.LENGTH_SHORT).show();
                     } else
-                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " Unchecked", Toast.LENGTH_SHORT).show();
+                        MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/0");
+                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " éteinte", Toast.LENGTH_SHORT).show();
                 }
             });
         }

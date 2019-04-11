@@ -14,6 +14,11 @@ public class PilotageCamerasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pilotage_cameras);
+
+        Intent intent = getIntent();
+        String cameraIP = intent.getStringExtra("cameraIP");
+
+        //camera1.loadUrl(cameraIP + "/video.cgi");
     }
 
     public class Camera extends AppCompatActivity {
@@ -22,6 +27,7 @@ public class PilotageCamerasActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+
 
 
         }
