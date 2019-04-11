@@ -20,7 +20,7 @@ public class FloorSelectionActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_selection);
 
-        buttonExterieur = findViewById(R.id.buttonPilotageMaison);
+        buttonExterieur = findViewById(R.id.buttonExterieur);
         buttonRDC = findViewById(R.id.buttonRdc);
         button1erEtage = findViewById(R.id.button1erEtage);
 

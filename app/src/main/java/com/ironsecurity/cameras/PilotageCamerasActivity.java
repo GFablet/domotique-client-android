@@ -18,9 +18,6 @@ public class PilotageCamerasActivity extends AppCompatActivity {
 
     public class Camera extends AppCompatActivity {
         Button Cam1;
-        Button Cam2;
-        Button Cam3;
-        Button Cam4;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {

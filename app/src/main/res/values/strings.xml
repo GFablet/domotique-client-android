@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Iron Security</string>
+    <string-array name="ChoixScenar">
+        <item>Choix du Scénario</item>
+        <item>Scenario1</item>
+        <item>Scenario2</item>
+        <item>Scenario3</item>
+    </string-array>
 </resources>
