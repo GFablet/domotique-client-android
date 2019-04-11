@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
-    tools:context=".MainActivity" >
+    android:background="@drawable/bga_sky"
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/buttonLogin"
@@ -15,7 +15,7 @@
         android:layout_marginTop="116dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/logiin18061"
+        android:background="@drawable/login_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +28,14 @@
         android:layout_marginStart="121dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="122dp"
+        android:contentDescription="Logo"
         app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -50,7 +51,8 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAllCaps="false"
-        android:textColorHint="#DFAF2C"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHint="@color/colorLightBlue"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +70,8 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="#DFAF2C"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHint="@color/colorLightBlue"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +86,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginBottom="315dp"
         android:hint="Remember Me"
-        android:textColorHint="#DFAF2C"
+        android:textColorHint="@color/colorDarkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/switchRemember"
         app:layout_constraintHorizontal_bias="0.0"
