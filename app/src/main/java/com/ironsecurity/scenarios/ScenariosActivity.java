@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ironsecurity.MainActivity;
 import com.ironsecurity.R;
 
 import java.util.HashMap;
@@ -31,6 +32,7 @@ public class ScenariosActivity extends AppCompatActivity implements PopupMenu.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scenarios);
 
+        //TODO Récupérer les scénarios de la BDD
         listeScenarios = new HashMap<>();
         listeScenarios.put("Scenario1", "allumer lumiere1 de (cuisine;rdc) pendant 10 secondes\n" +
                                         "eteindre lumiere1 de (cuisine;rdc)\n" +
@@ -50,9 +52,9 @@ public class ScenariosActivity extends AppCompatActivity implements PopupMenu.On
         envoieScenario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!textViewScenario.equals(null))
+                if(!SCENARIO_ID.equals(null))
                 {
-
+                    MainActivity.clientThread.sendMessage("executeScenarioByID/"+SCENARIO_ID);
                 }
             }
         });
@@ -84,7 +86,7 @@ public class ScenariosActivity extends AppCompatActivity implements PopupMenu.On
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         SCENARIO_ID = parent.getItemAtPosition(position).toString().replaceAll("[a-zA-Z]","");
-        Toast.makeText(this, SCENARIO_ID, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, SCENARIO_ID, Toast.LENGTH_SHORT).show();
         textViewScenario.setText(listeScenarios.get(parent.getItemAtPosition(position).toString()));
     }
 
