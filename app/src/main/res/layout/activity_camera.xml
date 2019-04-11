@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".cameras.CameraActivity">
 
     <ImageView
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <Button
         android:id="@+id/buttonCamera1"
@@ -29,10 +29,11 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="34dp"
         android:layout_marginBottom="345dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_camera"
         android:tag="1"
         android:text="Caméra 1"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,10 +46,11 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="345dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_camera"
         android:tag="2"
         android:text="Caméra 2"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonCamera1"
@@ -62,10 +64,11 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="208dp"
         android:layout_marginBottom="188dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_camera"
         android:tag="3"
         android:text="Caméra 3"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
@@ -80,10 +83,11 @@
         android:layout_marginStart="39dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_camera"
         android:tag="3"
         android:text="Caméra 4"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1erEtage"
         app:layout_constraintTop_toBottomOf="@+id/buttonRdc" />
