@@ -27,7 +27,7 @@ public class RoomActivity extends AppCompatActivity {
         buttonLumiere1 = findViewById(R.id.buttonLumiere1);
         buttonVolet1 = findViewById(R.id.buttonVolet1);
 
-        radio = findViewById(R.id.radioButton);
+        //radio = findViewById(R.id.radioButton);
 
         radio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
