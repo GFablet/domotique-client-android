@@ -11,10 +11,9 @@
         android:layout_width="339dp"
         android:layout_height="505dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="187dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:tag="43"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,14 +26,14 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
+        android:button="@drawable/radio_selector_lumiere"
         android:tag="39"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <CheckBox
         android:id="@+id/checkBoxLampe2"
@@ -43,13 +42,13 @@
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
         android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:tag="37"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.293" />
 
     <CheckBox
         android:id="@+id/checkBoxLampe3"
@@ -57,11 +56,11 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="43"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.293" />
@@ -71,12 +70,12 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
-        android:layout_marginBottom="180dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:layout_marginBottom="148dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="44"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <CheckBox
@@ -85,8 +84,8 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="40"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.831"
@@ -100,14 +99,14 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="41"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.51"  />
+        app:layout_constraintVertical_bias="0.643" />
 
     <CheckBox
         android:id="@+id/checkBoxLampe6"
@@ -115,14 +114,14 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="42"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="0.994" />
 
     <CheckBox
         android:id="@+id/checkBoxLampe7"
@@ -131,13 +130,13 @@
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
         android:button="@drawable/radio_selector_lumiere_carree"
-        android:tag="39"
+        android:tag="38"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.73"/>
+        app:layout_constraintVertical_bias="0.729" />
 
     <CheckBox
         android:id="@+id/checkBoxClim"
@@ -145,14 +144,14 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
+        android:button="@drawable/radio_selector_clim"
         android:tag="39"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <CheckBox
         android:id="@+id/checkBoxVolet1"
@@ -160,7 +159,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="24dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
+        android:button="@drawable/radio_selector_volet"
         android:tag="190"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
@@ -173,21 +172,11 @@
         android:layout_height="60dp"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="12dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
+        android:button="@drawable/radio_selector_volet"
         android:tag="189"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
-
-    <CheckBox
-        android:id="@+id/radioButtonLampe1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginBottom="94dp"
-        android:button="@drawable/radio_selector_lumiere_carree"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
