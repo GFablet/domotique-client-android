@@ -31,7 +31,8 @@
         android:background="@drawable/bg_pilotagel"
         android:tag="1"
         android:text="Pilotage maison"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -45,7 +46,8 @@
         android:background="@drawable/bg_scenario"
         android:tag="2"
         android:text="Scénarios domotiques"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -58,7 +60,8 @@
         android:background="@drawable/bg_camera_mos"
         android:tag="3"
         android:text="Mosaïque caméras"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonRdc" />
 
@@ -72,7 +75,8 @@
         android:background="@drawable/bg_statistique"
         android:tag="3"
         android:text="Statistiques"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +92,8 @@
         android:background="@drawable/bg_camera_control"
         android:tag="3"
         android:text="Pilotage caméras"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/buttonMosaiqueCameras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPilotageMaison" />
