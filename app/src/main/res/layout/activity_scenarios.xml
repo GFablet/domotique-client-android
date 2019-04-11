@@ -1,81 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".scenarios.ScenariosActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="189dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="525dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
-
-    <Spinner
-        android:id="@+id/choix"
-        android:layout_width="218dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="216dp"
-        android:background="@drawable/ic_icon"
-        android:contentDescription="testt"
-        android:onClick="showPopup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.991"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewScenario"
-        android:layout_width="291dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="68dp"
-        android:ems="10"
-        android:gravity="top"
-        android:singleLine="false"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choix" />
-
-    <Button
-        android:id="@+id/buttonEnvoieScenario"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="162dp"
-        android:background="@drawable/gradientbutton"
-        android:text="Envoyer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScenario" />
+        android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="189dp"
+            android:layout_height="126dp"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="111dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoprojetalpha" />
+
+        <Spinner
+            android:id="@+id/choix"
+            android:layout_width="218dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.248"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="192dp"
+            android:background="@drawable/ic_icon"
+            android:contentDescription="testt"
+            android:onClick="showPopup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewScenario"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="68dp"
+            android:ems="10"
+            android:gravity="top"
+            android:singleLine="false"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choix" />
+
+        <Button
+            android:id="@+id/buttonEnvoieScenario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="162dp"
+            android:background="@drawable/gradientbutton"
+            android:text="Envoyer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScenario" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
