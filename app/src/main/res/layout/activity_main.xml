@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bga_sky"
     tools:context=".MainActivity">
 
     <Button
@@ -15,7 +15,7 @@
         android:layout_marginTop="116dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/logiin18061"
+        android:background="@drawable/login_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,16 +32,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <ImageButton
         android:id="@+id/Option"
-        android:layout_width="wrap_content"
+        android:layout_width="38dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="3dp"
-        android:background="@drawable/ic_action_name"
+        android:background="@drawable/settings_icon"
         android:contentDescription="option"
         app:layout_constraintEnd_toStartOf="@+id/buttonSupport"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -52,7 +52,7 @@
         android:layout_width="55dp"
         android:layout_height="63dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="10dp"
         android:background="@null"
         android:contentDescription="support"
@@ -76,6 +76,7 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAllCaps="false"
+        android:textColor="@color/colorDarkBlue"
         android:textColorHint="@color/colorLightBlue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +109,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginBottom="315dp"
         android:hint="Remember Me"
-        android:textColorHint="@color/colorY"
+        android:textColorHint="@color/colorDarkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
