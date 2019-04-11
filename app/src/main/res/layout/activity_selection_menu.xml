@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bground"
+    android:background="@drawable/gradient"
     tools:context=".operate_house.FloorSelectionActivity">
 
     <ImageView
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logopr" />
+        app:srcCompat="@drawable/logoprojetalpha" />
 
     <Button
         android:id="@+id/buttonPilotageMaison"
@@ -28,7 +28,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="49dp"
-        android:background="@drawable/bg_pilotagel"
+        android:background="@drawable/gradientbutton"
         android:tag="1"
         android:text="Pilotage maison"
         android:textColor="@color/colorDarkBlue"
@@ -43,7 +43,7 @@
         android:layout_height="86dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/bg_scenario"
+        android:background="@drawable/gradientbutton"
         android:tag="2"
         android:text="Scénarios domotiques"
         android:textColor="@color/colorDarkBlue"
@@ -57,7 +57,7 @@
         android:layout_height="86dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="55dp"
-        android:background="@drawable/bg_camera_mos"
+        android:background="@drawable/gradientbutton"
         android:tag="3"
         android:text="Mosaïque caméras"
         android:textColor="@color/colorDarkBlue"
@@ -72,7 +72,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="208dp"
-        android:background="@drawable/bg_statistique"
+        android:background="@drawable/gradientbutton"
         android:tag="3"
         android:text="Statistiques"
         android:textColor="@color/colorDarkBlue"
@@ -89,7 +89,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="45dp"
-        android:background="@drawable/bg_camera_control"
+        android:background="@drawable/gradientbutton"
         android:tag="3"
         android:text="Pilotage caméras"
         android:textColor="@color/colorDarkBlue"

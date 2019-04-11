@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bga_sky"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <Button
@@ -15,7 +15,7 @@
         android:layout_marginTop="116dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="144dp"
-        android:background="@drawable/login_2"
+        android:background="@drawable/logiin18061"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        app:srcCompat="@drawable/logopr" />
+        app:srcCompat="@drawable/logoprojetalpha" />
 
     <ImageButton
         android:id="@+id/Option"
@@ -63,7 +63,6 @@
         app:srcCompat="@drawable/ic_action_support" />
 
 
-
     <EditText
         android:id="@+id/editTextUsername"
         android:layout_width="wrap_content"
@@ -78,7 +77,6 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAllCaps="false"
-        android:textColor="@color/colorDarkBlue"
         android:textColorHint="@color/colorLightBlue"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
@@ -113,7 +111,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginBottom="315dp"
         android:hint="Remember Me"
-        android:textColorHint="@color/colorDarkBlue"
+        android:textColorHint="@color/colorY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/switchRemember"
         app:layout_constraintHorizontal_bias="0.0"
