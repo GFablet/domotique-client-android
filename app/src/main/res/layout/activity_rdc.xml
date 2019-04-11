@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".operate_house.FloorSelectionActivity">
 
     <ImageView
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <Button
         android:id="@+id/buttonSalleAManger"
@@ -28,9 +28,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_salle_a_m"
         android:text="Salle à manger"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/buttonSalon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonGarageEst" />
@@ -42,9 +43,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="278dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_wc"
         android:text="WC"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +59,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_chambre"
         android:text="Chambre d'invités"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonChambre1"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -70,9 +73,10 @@
         android:layout_height="70dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_vestibule"
         android:text="Vestibule"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonHallNord" />
 
@@ -84,7 +88,8 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/gradientbutton"
         android:text="Garage Nord"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/buttonGarageEst"
         app:layout_constraintTop_toBottomOf="@+id/buttonEscalierCentral" />
 
@@ -96,7 +101,8 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/gradientbutton"
         android:text="Garage Est"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonCuisine" />
 
@@ -106,9 +112,10 @@
         android:layout_height="70dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_salon"
         android:text="Salon"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/buttonVestibule"
         app:layout_constraintTop_toBottomOf="@+id/buttonGarageNord" />
 
@@ -120,7 +127,8 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/gradientbutton"
         android:text="Escalier Central"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/buttonCuisine"
         app:layout_constraintTop_toBottomOf="@+id/buttonChambre1" />
 
@@ -133,7 +141,8 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/gradientbutton"
         android:text="Escalier Est"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonEscalierCentral"
         app:layout_constraintTop_toBottomOf="@+id/buttonChambre2" />
@@ -145,9 +154,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_hall"
         android:text="Hall nord"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonGarageNord"
         app:layout_constraintTop_toBottomOf="@+id/buttonEscalierEst" />
@@ -160,7 +170,8 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/gradientbutton"
         android:text="Bibliothèque"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -171,9 +182,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="345dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_suite_p"
         android:text="Suite parentale"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonBibliotheque"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
@@ -186,9 +198,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_cuisine"
         android:text="Cuisine"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonGarageEst"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonBibliotheque" />
