@@ -16,6 +16,9 @@ import com.ironsecurity.net.CClient;
 
 public class RoomActivity extends AppCompatActivity {
 
+    //Mode chaud/froid de la clim(chaud = 1, froid = 0)
+    static String AC_MODE = "1";
+
     Button buttonLumiere1;
     Button buttonVolet1;
     Button buttonClim;
@@ -25,6 +28,7 @@ public class RoomActivity extends AppCompatActivity {
                         R.id.checkBoxLampe4,R.id.checkBoxLampe5,R.id.checkBoxLampe6,
                         R.id.checkBoxLampe7, R.id.checkBoxLampe8};
     int[] voletsID = {R.id.checkBoxVolet1,R.id.checkBoxVolet2};
+    int clim = R.id.checkBoxClim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,38 +36,65 @@ public class RoomActivity extends AppCompatActivity {
         setContentView(R.layout.salon_layout);
 
 
+        //On lie chaque id de lumière à un listener
         for(int lumiere : lumieresID)
         {
-            CheckBox checkBox = findViewById(lumiere);
-            //if(MainActivity.clientThread)
 
-            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if(isChecked)
-                    {
-                        MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/1");
-                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumée", Toast.LENGTH_SHORT).show();
-                    } else
-                        MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/0");
-                        Toast.makeText(RoomActivity.this, buttonView.getTag() + " éteinte", Toast.LENGTH_SHORT).show();
-                }
-            });
+            //if(MainActivity.clientThread)
+            operateEquipment(lumiere);
         }
 
-        /*
-        checkBox.setChecked(true);
+        //On lie chaque id de volet à un listener
+        for(int volet : voletsID)
+        {
+            //if(MainActivity.clientThread)
+            operateEquipment(volet);
 
+        }
+
+        operateAC(clim);
+
+    }
+
+    /**
+     * Méthode d'envoie de la commande de l'équipement au serveur
+     * @param checkBoxID
+     */
+    public void operateEquipment(int checkBoxID)
+    {
+        CheckBox checkBox = findViewById(checkBoxID);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
                 {
-                    Toast.makeText(RoomActivity.this, "Checked", Toast.LENGTH_SHORT).show();
+                    MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/1");
+                    Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumé(e)", Toast.LENGTH_SHORT).show();
                 } else
-                    Toast.makeText(RoomActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
+                    MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/0");
+                Toast.makeText(RoomActivity.this, buttonView.getTag() + " éteint(e)", Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
+    }
 
+    /**
+     * Méthode d'envoie de la commande de la climatisation au serveur
+     * @param checkBoxID
+     */
+    public void operateAC(int checkBoxID)
+    {
+        CheckBox checkBox = findViewById(checkBoxID);
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked)
+                {
+                    MainActivity.clientThread.sendMessage("operateOneAC/"+ buttonView.getTag() +"/1/" + AC_MODE);
+                    Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumé(e)", Toast.LENGTH_SHORT).show();
+                } else
+                    MainActivity.clientThread.sendMessage("operateOneAC/"+ buttonView.getTag() +"/0/" + AC_MODE);
+                Toast.makeText(RoomActivity.this, buttonView.getTag() + " éteint(e)", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

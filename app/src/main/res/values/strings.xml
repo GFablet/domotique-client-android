@@ -6,4 +6,5 @@
         <item>Scenario2</item>
         <item>Scenario3</item>
     </string-array>
+    <string name="ip_server">CClient.ADDR_IP</string>
 </resources>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Switch;
 
 import com.ironsecurity.database.DatabaseHelper;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         EditText editTextUsername;
         EditText editTextPassword;
         Switch switchRememberMe;
+        ImageButton buttonOption;
+        ImageButton buttonSupport;
 
         public static final String PREFS_NAME = "MyPrefsFile";
         private static final String PREF_USERNAME = "savusername";
@@ -35,19 +38,32 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            //Création du client qui se chargera d'envoyer les messages au serveur java
-            clientThread = new CClient();
-            thread = new Thread(clientThread);
-            thread.start();
+            buttonOption = findViewById(R.id.Option);
+            buttonSupport = findViewById(R.id.buttonSupport);
 
             loginButton = findViewById(R.id.buttonLogin);
             editTextUsername = findViewById(R.id.editTextUsername);
             editTextPassword = findViewById(R.id.editTextPassword);
+            switchRememberMe = findViewById(R.id.switchRemember);
+
+            buttonSupport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+            buttonOption.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, ConfigurationActivity.class);
+                    startActivity(intent);
+                }
+            });
 
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    changeActivity();
+                    run();
                 }
             });
         }
@@ -57,14 +73,14 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 if(editTextUsername.getText().length()==0)
                 {
 
-                    ShowAlert.displayAlert(this,"Please enter valid Username");
+                    ShowAlert.displayAlert(this,"Nom d'utilisateur incorrect");
                     editTextUsername.requestFocus();
                     return;
                 }
 
                 if(editTextPassword.getText().length()==0)
                 {
-                    ShowAlert.displayAlert(this,"Please enter valid Password");
+                    ShowAlert.displayAlert(this,"Mot de passe incorrect");
                     editTextPassword.requestFocus();
                     return;
                 }
@@ -72,7 +88,9 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 String username= editTextUsername.getText().toString();
                 String password= editTextPassword.getText().toString();
                 final DatabaseHelper dbHelper = new DatabaseHelper(this);
-                dbHelper.addUser(new User("Admin", "admin"));
+                dbHelper.addUser(new User("Admin", "admin", 1));
+                dbHelper.addUser(new User("Utilisateur", "motdepasse", 2));
+                dbHelper.addUser(new User("Surveillance", "motdepasse", 3));
 
 
                 if(switchRememberMe.isChecked())
@@ -89,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 if(user != null)
                 {
                     Intent i = new Intent(this, MenuActivity.class); // here the nextpage to be loaded is specified
+                    i.putExtra("account", user.getAccount());
                     startActivity(i);
                 }
                 else
@@ -105,4 +124,15 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 Intent intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);
         }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //Création du client qui se chargera d'envoyer les messages au serveur java
+        if(clientThread == null) {
+            clientThread = new CClient();
+            thread = new Thread(clientThread);
+            thread.start();
+        }
+    }
 }

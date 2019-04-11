@@ -12,8 +12,6 @@ import java.net.UnknownHostException;
 
 public class CClient implements Runnable {
 
-    private static final int PORT = 45000; // Valeur arbitraire
-    private static final String ADDR_IP = "192.168.56.1"; // Addresse ip du serveur
 
 
 
@@ -26,8 +24,8 @@ public class CClient implements Runnable {
         {
             try {
                 //On déclare un nouveau socket avec l'adresse IP et le port du serveur
-                InetAddress serverAddr = InetAddress.getByName(ADDR_IP);
-                socket = new Socket(serverAddr, PORT);
+                InetAddress serverAddr = InetAddress.getByName(CServer.ADDR_IP);
+                socket = new Socket(serverAddr, CServer.PORT);
 
                 while (!Thread.currentThread().isInterrupted()) {
 
