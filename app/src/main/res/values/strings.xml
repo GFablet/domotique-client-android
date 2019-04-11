@@ -57,5 +57,11 @@
     <string name="support">support</string>
     <string name="option_serveur">option serveur</string>
     <string name="option">option</string>
-    <string name="ip_server">CClient.ADDR_IP</string>
+    <string name="action_lights_floor">Piloter les lumières</string>
+    <string name="action_shutters_floor">Piloter les volets</string>
+    <string name="action_ac_floor">Piloter les climatisations</string>
+    <string name="action_lights_room">Piloter les lumières</string>
+    <string name="action_shutters_room">Piloter les volets</string>
+    <string name="action_ac_room">Piloter les climatisations</string>
+
 </resources>

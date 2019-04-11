@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.ironsecurity.R;
 
-public class PilotageCamerasActivity extends AppCompatActivity {
+public class OperateCamerasActivity extends AppCompatActivity {
 
 
     @Override

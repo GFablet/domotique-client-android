@@ -21,11 +21,6 @@ public class RoomActivity extends AppCompatActivity {
     //Mode chaud/froid de la clim(chaud = 1, froid = 0)
     static String AC_MODE = "1";
 
-    Button buttonLumiere1;
-    Button buttonVolet1;
-    Button buttonClim;
-    CheckBox checkBox;
-
     int[] lumieresID;
     int[] voletsID;
     int clim;
@@ -89,7 +84,7 @@ public class RoomActivity extends AppCompatActivity {
      * Méthode d'envoie de la commande de la climatisation au serveur
      * @param checkBoxID
      */
-    public void operateAC(int checkBoxID)
+     public void operateAC(int checkBoxID)
     {
         CheckBox checkBox = findViewById(checkBoxID);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

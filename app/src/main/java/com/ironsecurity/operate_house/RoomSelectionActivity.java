@@ -3,8 +3,11 @@ package com.ironsecurity.operate_house;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.ironsecurity.R;
 
@@ -57,5 +60,51 @@ public class RoomSelectionActivity extends AppCompatActivity {
             });
         }
 
+    }
+
+    private void operateAllLightsFromFloor(String string){
+        Toast.makeText(this,"Lumières " + string,Toast.LENGTH_LONG).show();
+    }
+
+    private void operateAllShuttersFromFloor(String string){
+        Toast.makeText(this,"Volets " + string,Toast.LENGTH_LONG).show();
+    }
+
+    private void operateAllACFromFloor(String string){
+        Toast.makeText(this,"Climatisations " + string,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //ajoute les entrées de menu_test à l'ActionBar
+        getMenuInflater().inflate(R.menu.menu_floor, menu);
+        return true;
+    }
+
+    //gère le click sur une action de l'ActionBar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_lights_floor_on:
+                operateAllLightsFromFloor("allumées");
+                return true;
+            case R.id.action_lights_floor_off:
+                operateAllLightsFromFloor("éteintes");
+                return true;
+            case R.id.action_shutters_floor_on:
+                operateAllShuttersFromFloor("ouverts");
+                return true;
+            case R.id.action_shutters_floor_off:
+                operateAllShuttersFromFloor("fermés");
+                return true;
+            case R.id.action_ac_floor_on:
+                operateAllACFromFloor("allumées");
+                return true;
+            case R.id.action_ac_floor_off:
+                operateAllACFromFloor("éteintes");
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

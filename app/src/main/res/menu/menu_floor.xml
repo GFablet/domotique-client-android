@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_lights_floor"
+        android:title="@string/action_lights_floor"
+        android:icon="@drawable/lightbulb"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_lights_floor_on"
+                android:title="Allumer les lumières"
+                />
+            <item
+                android:id="@+id/action_lights_floor_off"
+                android:title="Eteindre les lumières"
+                />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_shutters_floor"
+        android:icon="@drawable/window"
+        android:title="@string/action_shutters_floor"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_shutters_floor_on"
+                android:title="Ouvrir les volets"
+                />
+            <item
+                android:id="@+id/action_shutters_floor_off"
+                android:title="Fermer les volets"
+                />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_ac_floor"
+        android:icon="@drawable/ac"
+        android:title="@string/action_ac_floor"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_ac_floor_on"
+                android:title="Allumer les climatisations"
+                />
+            <item
+                android:id="@+id/action_ac_floor_off"
+                android:title="Eteindre les climatisations"
+                />
+
+        </menu>
+    </item>
+</menu>
