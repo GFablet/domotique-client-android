@@ -49,5 +49,44 @@ public class CreateScenarioActivity extends AppCompatActivity implements Adapter
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+    }
+    
 
-} }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_scenario);
+
+        Spinner spinner = findViewById(R.id.Equipements);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.equipements, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_scenario);
+
+        Spinner spinner = findViewById(R.id.Pieces);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.pieces, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_create_scenario);
+
+        Spinner spinner = findViewById(R.id.Temps);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.temps, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+}
