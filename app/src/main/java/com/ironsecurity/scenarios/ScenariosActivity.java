@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.ironsecurity.MainActivity;
 import com.ironsecurity.R;
+import com.ironsecurity.net.CClient;
 
 import java.util.HashMap;
 
@@ -54,7 +55,7 @@ public class ScenariosActivity extends AppCompatActivity implements PopupMenu.On
             public void onClick(View v) {
                 if(!SCENARIO_ID.equals(null))
                 {
-                    MainActivity.clientThread.sendMessage("executeScenarioByID/"+SCENARIO_ID);
+                    new CClient().execute("executeScenarioByID/"+SCENARIO_ID);
                 }
             }
         });

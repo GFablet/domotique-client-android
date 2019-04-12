@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButtonCamera1"
+        android:id="@+id/imageButtonCameraDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -29,11 +29,11 @@
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonCamera4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonCameraUp"
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/imageButtonCamera2"
+        android:id="@+id/imageButtonCameraLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -47,7 +47,7 @@
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/imageButtonCamera3"
+        android:id="@+id/imageButtonCameraRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -61,7 +61,7 @@
         app:srcCompat="@android:drawable/arrow_down_float" />
 
     <ImageButton
-        android:id="@+id/imageButtonCamera4"
+        android:id="@+id/imageButtonCameraUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

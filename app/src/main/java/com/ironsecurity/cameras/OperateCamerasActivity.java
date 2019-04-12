@@ -4,12 +4,24 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.ironsecurity.R;
 
 public class OperateCamerasActivity extends AppCompatActivity {
 
+
+    WebView webViewCamera;
+    ImageButton btnUp;
+    ImageButton btnDown;
+    ImageButton btnLeft;
+    ImageButton btnRight;
+    String urlUp;
+    String urlDown;
+    String urlLeft;
+    String urlRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +31,47 @@ public class OperateCamerasActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String cameraIP = intent.getStringExtra("cameraIP");
 
-        //camera1.loadUrl(cameraIP + "/video.cgi");
+        webViewCamera = findViewById(R.id.webView);
+        webViewCamera.loadUrl(cameraIP + "/video.cgi");
+
+        btnUp = findViewById(R.id.imageButtonCameraUp);
+        btnDown = findViewById(R.id.imageButtonCameraDown);
+        btnLeft = findViewById(R.id.imageButtonCameraLeft);
+        btnRight = findViewById(R.id.imageButtonCameraRight);
+
+        urlUp = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=1";
+        urlDown = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=7";
+        urlLeft = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=3";
+        urlRight = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=5";
+
+        btnUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                webViewCamera.loadUrl(urlUp);
+            }
+        });
+
+        btnDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //requestQueue.add(requestDown);
+                webViewCamera.loadUrl(urlDown);
+            }
+        });
+
+        btnLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                webViewCamera.loadUrl(urlLeft);
+            }
+        });
+
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                webViewCamera.loadUrl(urlRight);
+            }
+        });
     }
 
-    public class Camera extends AppCompatActivity {
-        Button Cam1;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-
-
-        }
-    }
 }

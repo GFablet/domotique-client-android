@@ -9,7 +9,7 @@ import com.ironsecurity.R;
 public class MosaicCamerasActivity extends AppCompatActivity {
 
     WebView camera1;
-    WebView  camera2;
+    WebView camera2;
     WebView camera3;
     WebView camera4;
 

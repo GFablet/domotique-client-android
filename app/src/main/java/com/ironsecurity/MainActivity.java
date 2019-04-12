@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         private static final String PREF_PASSWORD = "savpassword";
         static public CClient clientThread;
 
-        Thread thread;
+        //Thread thread;
 
         /** Called when the activity is first created. */
         @Override
@@ -130,10 +130,10 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     protected void onStart() {
         super.onStart();
         //Création du client qui se chargera d'envoyer les messages au serveur java
-        if(clientThread == null) {
+       /* if(clientThread == null) {
             clientThread = new CClient();
             thread = new Thread(clientThread);
             thread.start();
-        }
+        }/*/
     }
 }
