@@ -4,77 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bground"
+    android:background="@drawable/gradient"
     tools:context=".cameras.PilotageCamerasActivity">
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="281dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButtonCamera1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="186dp"
-        android:contentDescription="TODO"
+    <Button
+        android:id="@+id/btnUp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="20dp"
+        android:text="Haut"
+        app:layout_constraintBottom_toTopOf="@+id/btnDown"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonCamera4"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
-    <ImageButton
-        android:id="@+id/imageButtonCamera2"
+    <Button
+        android:id="@+id/btnDown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="110dp"
-        android:rotation="-270"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:srcCompat="@android:drawable/arrow_down_float" />
-
-    <ImageButton
-        android:id="@+id/imageButtonCamera3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="110dp"
-        android:layout_marginEnd="128dp"
-        android:rotation="270"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="74dp"
+        android:text="Bas"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:srcCompat="@android:drawable/arrow_down_float" />
-
-    <ImageButton
-        android:id="@+id/imageButtonCamera4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="186dp"
-        android:rotation="180"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:srcCompat="@android:drawable/arrow_down_float" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUp" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="112dp"
+        android:text="Gauche"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDown"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="112dp"
+        android:text="Droite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnDown"
+        app:layout_constraintTop_toBottomOf="@+id/webView" />
 
 
 </android.support.constraint.ConstraintLayout>

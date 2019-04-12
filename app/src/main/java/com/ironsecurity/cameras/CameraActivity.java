@@ -10,11 +10,36 @@ import com.ironsecurity.R;
 
 public class CameraActivity extends AppCompatActivity {
 
+
+    Button button1;
+    Button button2;
+    Button button3;
+    Button button4;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+        button1 = findViewById(R.id.buttonCamera1);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CameraActivity.this, PilotageCamerasActivity.class);
+                intent.putExtra("cameraIP", "http://admin:@172.16.3.14");
+                startActivity(intent);
+                //openPilotageCamerasActivity();
+
+
+            }
+        });
+
+    }
+
+    private void openPilotageCamerasActivity() {
+        Intent intent = new Intent(this, PilotageCamerasActivity.class);
+        startActivity(intent);
 
     }
 }
