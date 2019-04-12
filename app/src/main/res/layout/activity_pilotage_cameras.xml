@@ -20,74 +20,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/btnUp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="20dp"
-        android:text="Haut"
-        android:textColor="@color/colorDarkBlue"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnDown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="175dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webView"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        app:srcCompat="@drawable/button_up" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnDown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="74dp"
-        android:text="Bas"
-        android:textColor="@color/colorDarkBlue"
-        android:textStyle="bold"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="50dp"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUp" />
+        app:srcCompat="@drawable/button_down" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnLeft"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="121dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="112dp"
-        android:text="Gauche"
-        android:textColor="@color/colorDarkBlue"
-        android:textStyle="bold"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="110dp"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDown"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView" />
+        app:layout_constraintTop_toBottomOf="@+id/webView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/button_left" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnRight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="121dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="112dp"
-        android:text="Droite"
-        android:textColor="@color/colorDarkBlue"
-        android:textStyle="bold"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="110dp"
+        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnDown"
-        app:layout_constraintTop_toBottomOf="@+id/webView" />
+        app:layout_constraintTop_toBottomOf="@+id/webView"
+        app:srcCompat="@drawable/button_right" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 import com.ironsecurity.R;
@@ -13,10 +14,10 @@ import com.ironsecurity.R;
 public class PilotageCamerasActivity extends AppCompatActivity {
 
     WebView webViewCamera;
-    Button btnUp;
-    Button btnDown;
-    Button btnLeft;
-    Button btnRight;
+    ImageButton btnUp;
+    ImageButton btnDown;
+    ImageButton btnLeft;
+    ImageButton btnRight;
     String urlUp;
     String urlDown;
     String urlLeft;
