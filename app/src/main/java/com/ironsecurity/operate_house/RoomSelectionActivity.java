@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.ironsecurity.R;
+import com.ironsecurity.cameras.OperateCamerasActivity;
+import com.ironsecurity.net.CClient;
 
 public class RoomSelectionActivity extends AppCompatActivity {
 
@@ -62,18 +64,35 @@ public class RoomSelectionActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Méthode de pilotage des lumières de l'étage
+     * @param string
+     */
     private void operateAllLightsFromFloor(String string){
         Toast.makeText(this,"Lumières " + string,Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Méthode de pilotage des volets de l'étage
+     * @param string
+     */
     private void operateAllShuttersFromFloor(String string){
         Toast.makeText(this,"Volets " + string,Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Méthode de pilotage des climatisations de l'étage
+     * @param string
+     */
     private void operateAllACFromFloor(String string){
         Toast.makeText(this,"Climatisations " + string,Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * Menu pour allumer/éteindre les équipements d'un étage
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //ajoute les entrées de menu_test à l'ActionBar
@@ -86,21 +105,27 @@ public class RoomSelectionActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_lights_floor_on:
+                new CClient().execute("operateEquipmentsFromFloor/0/1/"+ FloorSelectionActivity.RDC_ID);
                 operateAllLightsFromFloor("allumées");
                 return true;
             case R.id.action_lights_floor_off:
+                new CClient().execute("operateEquipmentsFromFloor/0/0/"+ FloorSelectionActivity.RDC_ID);
                 operateAllLightsFromFloor("éteintes");
                 return true;
             case R.id.action_shutters_floor_on:
+                new CClient().execute("operateEquipmentsFromFloor/3/0/"+ FloorSelectionActivity.RDC_ID);
                 operateAllShuttersFromFloor("ouverts");
                 return true;
             case R.id.action_shutters_floor_off:
+                new CClient().execute("operateEquipmentsFromFloor/3/1/"+ FloorSelectionActivity.RDC_ID);
                 operateAllShuttersFromFloor("fermés");
                 return true;
             case R.id.action_ac_floor_on:
+                new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID );
                 operateAllACFromFloor("allumées");
                 return true;
             case R.id.action_ac_floor_off:
+                new CClient().execute("operateACFromFloor/0/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID );
                 operateAllACFromFloor("éteintes");
                 return true;
         }

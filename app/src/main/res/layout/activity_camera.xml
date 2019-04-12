@@ -31,12 +31,12 @@
         android:text="Caméra 1"
         android:textColor="@color/colorDarkBlue"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCamera2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/buttonRdc"
+        android:id="@+id/buttonCamera2"
         android:layout_width="131dp"
         android:layout_height="125dp"
         android:layout_marginTop="55dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button1erEtage"
+        android:id="@+id/buttonCamera3"
         android:layout_width="131dp"
         android:layout_height="125dp"
         android:layout_marginStart="50dp"
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonCamera4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRdc"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCamera2"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -81,7 +81,7 @@
         android:textColor="@color/colorDarkBlue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1erEtage"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRdc" />
+        app:layout_constraintStart_toEndOf="@+id/buttonCamera3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCamera2" />
 
 </android.support.constraint.ConstraintLayout>

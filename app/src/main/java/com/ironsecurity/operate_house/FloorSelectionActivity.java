@@ -11,6 +11,11 @@ import com.ironsecurity.R;
 
 public class FloorSelectionActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //TODO A récupérer de la BDD
+    static final String EXTERIEUR_ID = "1";
+    static final String RDC_ID = "2";
+    static final String PREMIER_ID = "3";
+
     Button buttonExterieur;
     Button buttonRDC;
     Button button1erEtage;

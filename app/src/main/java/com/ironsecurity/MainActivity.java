@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         public static final String PREFS_NAME = "MyPrefsFile";
         private static final String PREF_USERNAME = "savusername";
         private static final String PREF_PASSWORD = "savpassword";
-        static public CClient clientThread;
 
-        //Thread thread;
 
         /** Called when the activity is first created. */
         @Override
@@ -49,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             buttonSupport.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                    startActivity(intent);
                 }
             });
             buttonOption.setOnClickListener(new View.OnClickListener() {
@@ -120,20 +119,4 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 }
             }
 
-        private void changeActivity()
-        {
-                Intent intent = new Intent(this, MenuActivity.class);
-                startActivity(intent);
-        }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //Création du client qui se chargera d'envoyer les messages au serveur java
-       /* if(clientThread == null) {
-            clientThread = new CClient();
-            thread = new Thread(clientThread);
-            thread.start();
-        }/*/
-    }
 }
