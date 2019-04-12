@@ -64,4 +64,14 @@
     <string name="action_shutters_room">Piloter les volets</string>
     <string name="action_ac_room">Piloter les climatisations</string>
 
+    <string-array name="actions">
+        <item>Eteindre</item>
+        <item>Allumer</item>
+    </string-array>
+
+    <string-array name="etages">
+        <item>Extérieur</item>
+        <item>Rez-de-chaussée</item>
+        <item>Premier étage</item>
+    </string-array>
 </resources>
