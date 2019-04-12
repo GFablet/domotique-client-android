@@ -15,6 +15,9 @@ import com.ironsecurity.net.CClient;
 
 public class RoomSelectionActivity extends AppCompatActivity {
 
+    static boolean LIGHTS_ON;
+    static boolean SHUTTERS_CLOSED;
+    static boolean AC_ON;
     //TODO A remplacer
     int[] lumieresSalonID =  {R.id.checkBoxSalonLampe1,R.id.checkBoxSalonLampe2,R.id.checkBoxSalonLampe3,
             R.id.checkBoxSalonLampe4,R.id.checkBoxSalonLampe5,R.id.checkBoxSalonLampe6,
@@ -32,6 +35,13 @@ public class RoomSelectionActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int layoutID = intent.getIntExtra("layout", R.layout.work_in_progress);
         setContentView(layoutID);
+
+        LIGHTS_ON = false;
+        SHUTTERS_CLOSED = false;
+        AC_ON = false;
+
+        final Intent intentToRoom = new Intent(RoomSelectionActivity.this, RoomActivity.class);
+
         //TODO Adapter cette partie pour tous les layouts
         if(layoutID == R.layout.activity_rdc)
         {
@@ -41,23 +51,21 @@ public class RoomSelectionActivity extends AppCompatActivity {
             buttonSalon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(RoomSelectionActivity.this, RoomActivity.class);
-                    intent.putExtra("idLumieres", lumieresSalonID);
-                    intent.putExtra("idVolets", voletsSalonID);
-                    intent.putExtra("idClim", climSalon);
-                    intent.putExtra("idLayout", R.layout.salon_layout);
-                    startActivity(intent);
+                    intentToRoom.putExtra("idLumieres", lumieresSalonID);
+                    intentToRoom.putExtra("idVolets", voletsSalonID);
+                    intentToRoom.putExtra("idClim", climSalon);
+                    intentToRoom.putExtra("idLayout", R.layout.salon_layout);
+                    startActivity(intentToRoom);
                 }
             });
             buttonChambre2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(RoomSelectionActivity.this, RoomActivity.class);
-                    intent.putExtra("idLumieres", lumieresChambre2ID);
-                    intent.putExtra("idVolets", voletsChambre2ID);
-                    intent.putExtra("idClim", climChambre2);
-                    intent.putExtra("idLayout", R.layout.chambre_layout);
-                    startActivity(intent);
+                    intentToRoom.putExtra("idLumieres", lumieresChambre2ID);
+                    intentToRoom.putExtra("idVolets", voletsChambre2ID);
+                    intentToRoom.putExtra("idClim", climChambre2);
+                    intentToRoom.putExtra("idLayout", R.layout.chambre_layout);
+                    startActivity(intentToRoom);
                 }
             });
         }
@@ -100,33 +108,59 @@ public class RoomSelectionActivity extends AppCompatActivity {
         return true;
     }
 
-    //gère le click sur une action de l'ActionBar
+    /**
+     * Actions exécutées lors d'un clique sur un item du menu
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_lights_floor_on:
                 new CClient().execute("operateEquipmentsFromFloor/0/1/"+ FloorSelectionActivity.RDC_ID);
                 operateAllLightsFromFloor("allumées");
+                LIGHTS_ON = true;
                 return true;
             case R.id.action_lights_floor_off:
                 new CClient().execute("operateEquipmentsFromFloor/0/0/"+ FloorSelectionActivity.RDC_ID);
                 operateAllLightsFromFloor("éteintes");
+                LIGHTS_ON = false;
                 return true;
             case R.id.action_shutters_floor_on:
                 new CClient().execute("operateEquipmentsFromFloor/3/0/"+ FloorSelectionActivity.RDC_ID);
                 operateAllShuttersFromFloor("ouverts");
+                SHUTTERS_CLOSED = false;
                 return true;
             case R.id.action_shutters_floor_off:
                 new CClient().execute("operateEquipmentsFromFloor/3/1/"+ FloorSelectionActivity.RDC_ID);
                 operateAllShuttersFromFloor("fermés");
+                SHUTTERS_CLOSED = true;
                 return true;
             case R.id.action_ac_floor_on:
-                new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID );
+                new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
                 operateAllACFromFloor("allumées");
+                AC_ON = true;
                 return true;
             case R.id.action_ac_floor_off:
-                new CClient().execute("operateACFromFloor/0/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID );
+                new CClient().execute("operateACFromFloor/0/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
                 operateAllACFromFloor("éteintes");
+                AC_ON = false;
+                return true;
+            case R.id.action_ac_floor_winter:
+                RoomActivity.AC_MODE = "1";
+                if(AC_ON)
+                    new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
+                else
+                    new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
+                operateAllACFromFloor("en mode hiver");
+                return true;
+            case R.id.action_ac_floor_summer:
+                RoomActivity.AC_MODE = "0";
+                if(AC_ON)
+                    new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
+                else
+                    new CClient().execute("operateACFromFloor/1/"+ RoomActivity.AC_MODE + "/" + FloorSelectionActivity.RDC_ID);
+                operateAllACFromFloor("en mode été");
                 return true;
         }
 

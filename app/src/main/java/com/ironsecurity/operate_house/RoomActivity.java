@@ -35,26 +35,38 @@ public class RoomActivity extends AppCompatActivity {
         //TODO Pour tests, à enlever
         if(layout == R.layout.chambre_layout)
             roomID = "9";
-        if(layout == R.layout.salon_layout)
+        else if(layout == R.layout.salon_layout)
             roomID = "23";
+
 
         if(layout != R.layout.work_in_progress)
         {
             //On lie chaque id de lumière à un listener
             for(int lumiere : lumieresID)
             {
-
-                operateEquipment(lumiere);
+                CheckBox checkBox = findViewById(lumiere);
+                checkBox.setChecked(RoomSelectionActivity.LIGHTS_ON);
+                operateEquipment(checkBox);
             }
 
             //On lie chaque id de volet à un listener
             for(int volet : voletsID)
             {
-                operateEquipment(volet);
+                CheckBox checkBox = findViewById(volet);
+                checkBox.setChecked(RoomSelectionActivity.SHUTTERS_CLOSED);
+                operateEquipment(checkBox);
 
             }
 
-            operateAC(clim);
+            final CheckBox checkBox = findViewById(clim);
+            //TODO trouver une autre façon de changer d'icône
+            if(AC_MODE.equals("0"))
+                checkBox.setButtonDrawable(R.drawable.clim_froid);
+            else
+                checkBox.setButtonDrawable(R.drawable.clim_chaud);
+            checkBox.setChecked(RoomSelectionActivity.AC_ON);
+
+            operateAC(checkBox);
         }
 
 
@@ -62,12 +74,11 @@ public class RoomActivity extends AppCompatActivity {
 
     /**
      * Méthode d'envoie de la commande de l'équipement au serveur
-     * @param checkBoxID
+     * @param checkBox
      */
-    public void operateEquipment(int checkBoxID)
+    public void operateEquipment(CheckBox checkBox)
     {
 
-        CheckBox checkBox = findViewById(checkBoxID);
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -75,7 +86,7 @@ public class RoomActivity extends AppCompatActivity {
                 {
                     new CClient().execute("operateOneEquipment/"+ buttonView.getTag() +"/1");
                     //MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/1");
-                    Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumé(e)", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(RoomActivity.this, buttonView.getTag() + " allumé(e)", Toast.LENGTH_SHORT).show();
                 } else
                     new CClient().execute("operateOneEquipment/"+ buttonView.getTag() +"/0");
                     //MainActivity.clientThread.sendMessage("operateOneEquipment/"+ buttonView.getTag() +"/0");
@@ -86,20 +97,26 @@ public class RoomActivity extends AppCompatActivity {
 
     /**
      * Méthode d'envoie de la commande de la climatisation au serveur
-     * @param checkBoxID
+     * @param checkBox
      */
-     public void operateAC(int checkBoxID)
+     public void operateAC(final CheckBox checkBox)
     {
-        CheckBox checkBox = findViewById(checkBoxID);
+
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
                 {
+                    //TODO trouver une autre façon de changer d'icône
+                    if(AC_MODE.equals("0"))
+                        checkBox.setButtonDrawable(R.drawable.clim_froid);
+                    else
+                        checkBox.setButtonDrawable(R.drawable.clim_chaud);
                     new CClient().execute("operateOneAC/"+ buttonView.getTag() +"/1/" + AC_MODE);
 
                 } else
                 {
+                    checkBox.setButtonDrawable(R.drawable.clim_eteinte);
                     new CClient().execute("operateOneAC/"+ buttonView.getTag() +"/0/" + AC_MODE);
                 }
             }
@@ -144,21 +161,35 @@ public class RoomActivity extends AppCompatActivity {
 
                 new CClient().execute("operateEquipmentsFromRoom/0/1/"+ roomID);
                 operateAllLightsFromRoom("allumées");
+                setCheckBoxChecked(lumieresID,true);
                 return true;
             case R.id.action_lights_floor_off:
                 new CClient().execute("operateEquipmentsFromRoom/0/0/"+ roomID);
                 operateAllLightsFromRoom("éteintes");
+                setCheckBoxChecked(lumieresID,false);
                 return true;
             case R.id.action_shutters_floor_on:
                 new CClient().execute("operateEquipmentsFromRoom/3/0/"+ roomID);
                 operateAllShuttersFromRoom("ouverts");
+                setCheckBoxChecked(voletsID,true);
                 return true;
             case R.id.action_shutters_floor_off:
                 new CClient().execute("operateEquipmentsFromRoom/3/1/"+ roomID);
                 operateAllShuttersFromRoom("fermés");
+                setCheckBoxChecked(voletsID,false);
                 return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //TODO Pour test, état à récupérer dans la BDD
+    public void setCheckBoxChecked(int[] checkBoxID, boolean checked)
+    {
+        for(int id : checkBoxID)
+        {
+            CheckBox checkBox = findViewById(id);
+            checkBox.setChecked(checked);
+        }
     }
 }

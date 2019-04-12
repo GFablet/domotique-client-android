@@ -52,6 +52,14 @@
                 android:id="@+id/action_ac_floor_off"
                 android:title="Eteindre les climatisations"
                 />
+            <item
+                android:id="@+id/action_ac_floor_winter"
+                android:title="Mode hiver"
+                />
+            <item
+                android:id="@+id/action_ac_floor_summer"
+                android:title="Mode été"
+                />
 
         </menu>
     </item>
