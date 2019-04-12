@@ -6,6 +6,7 @@
         android:id="@+id/action_lights_floor"
         android:title="@string/action_lights_floor"
         android:icon="@drawable/lightbulb"
+        android:iconTint="@color/colorDarkBlue"
         app:showAsAction="ifRoom">
         <menu>
             <item
@@ -23,6 +24,7 @@
     <item
         android:id="@+id/action_shutters_floor"
         android:icon="@drawable/window"
+        android:iconTint="@color/colorDarkBlue"
         android:title="@string/action_shutters_floor"
         app:showAsAction="ifRoom">
         <menu>
