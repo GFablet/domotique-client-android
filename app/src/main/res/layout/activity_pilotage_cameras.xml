@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".cameras.PilotageCamerasActivity">
 
     <WebView
@@ -29,11 +29,14 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="20dp"
         android:text="Haut"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnDown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/webView" />
+        app:layout_constraintTop_toBottomOf="@+id/webView"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <Button
         android:id="@+id/btnDown"
@@ -44,6 +47,8 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="74dp"
         android:text="Bas"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -59,6 +64,8 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="112dp"
         android:text="Gauche"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDown"
         app:layout_constraintHorizontal_bias="0.0"
@@ -74,6 +81,8 @@
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="112dp"
         android:text="Droite"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
