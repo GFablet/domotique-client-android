@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".operate_house.FloorSelectionActivity">
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <Button
         android:id="@+id/buttonExterieur"
@@ -27,7 +27,7 @@
         android:layout_marginTop="55dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_ext"
         android:tag="1"
         android:text="Extérieur"
         android:textColor="@color/colorDarkBlue"
@@ -44,7 +44,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_rdc"
         android:tag="2"
         android:text="Rez de chaussée"
         android:textColor="@color/colorDarkBlue"
@@ -60,7 +60,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="45dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_premier"
         android:tag="3"
         android:text="Premier étage"
         android:textColor="@color/colorDarkBlue"
