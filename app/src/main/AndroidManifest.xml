@@ -15,11 +15,14 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".scenarios.CreateScenarioActivity"></activity>
+        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".StatistiquesActivity" />
+        <activity android:name=".scenarios.CreateScenarioActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".cameras.CameraActivity" />
         <activity android:name=".cameras.MosaicCamerasActivity" />
         <activity android:name=".scenarios.ScenariosActivity" />
-        <activity android:name=".cameras.PilotageCamerasActivity" />
+        <activity android:name=".cameras.OperateCamerasActivity" />
         <activity android:name=".operate_house.RoomActivity" />
         <activity android:name=".operate_house.RoomSelectionActivity" />
         <activity android:name=".operate_house.FloorSelectionActivity" />

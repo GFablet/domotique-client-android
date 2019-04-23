@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".ConfigurationActivity">
 
     <ImageView
@@ -12,56 +12,49 @@
         android:layout_width="189dp"
         android:layout_height="126dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="111dp"
-        android:layout_marginBottom="525dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <EditText
         android:id="@+id/editTextIPServeur"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="8dp"
-        android:autofillHints=""
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="272dp"
         android:ems="10"
+        android:hint="IP du serveur"
         android:inputType="textPersonName"
-        android:text="IP du serveur"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="@color/colorDarkBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPortServeur"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextPortServeur"
-        android:layout_width="wrap_content"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="272dp"
         android:ems="10"
+        android:hint="Port"
         android:inputType="textPersonName"
-        android:text="Port"
+        android:textColor="@color/colorDarkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextIPServeur"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonValider"
         android:layout_width="160dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="valider"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,4 +63,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.736" />
+
+    <TextView
+        android:id="@+id/textViewIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="110dp"
+        android:text="Adresse IP"
+        app:layout_constraintBottom_toTopOf="@+id/editTextIPServeur"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPort"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="126dp"
+        android:text="Port"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPortServeur"
+        app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

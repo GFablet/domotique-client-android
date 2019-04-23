@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bground">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="505dp"
+        android:layout_marginTop="52dp"
+        android:tag="43"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chambre" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreLampe1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere_carree"
+        android:tag="57"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.635" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreLampe2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="58"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreLampe3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="59"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreLampe4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="88dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="60"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreClim"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_clim"
+        android:tag="137"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreVolet1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="272dp"
+        android:button="@drawable/radio_selector_volet"
+        android:tag="201"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreVolet2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="360dp"
+        android:button="@drawable/radio_selector_volet"
+        android:tag="202"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChambreVolet3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="360dp"
+        android:button="@drawable/radio_selector_volet"
+        android:tag="203"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+</android.support.constraint.ConstraintLayout>

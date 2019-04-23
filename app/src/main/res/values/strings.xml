@@ -1,3 +1,90 @@
 <resources>
     <string name="app_name">Iron Security</string>
+    <string-array name="ChoixScenar">
+        <item>Choix du Scénario</item>
+        <item>Scenario1</item>
+        <item>Scenario2</item>
+        <item>Scenario3</item>
+    </string-array>
+    <string name="login">LOGIN</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="salle_manger">Salle à manger</string>
+    <string name="todo">TODO</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="wc">WC</string>
+    <string name="sam">SAM</string>
+    <string name="vestibule">Vestibule</string>
+    <string name="chambre">Chambre</string>
+    <string name="suite_parentale">Suite Parentale</string>
+    <string name="salon">Salon</string>
+    <string name="hall_nord">Hall nord</string>
+    <string name="ext_rieur">Extérieur</string>
+    <string name="premier_etage">Premier Etage</string>
+    <string name="rez_de_chaus_e">Rez De Chausée</string>
+    <string name="garage">Garage</string>
+    <string name="lumi_re_5">Lumière 5</string>
+    <string name="lumi_re_7">Lumière 7</string>
+    <string name="lumi_re_3">Lumière 3</string>
+    <string name="lumi_re_4">Lumière 4</string>
+    <string name="lumi_re_6">Lumière 6</string>
+    <string name="lumi_re_2">Lumière 2</string>
+    <string name="store_1">Store 1</string>
+    <string name="store_2">Store 2</string>
+    <string name="clim">Clim</string>
+    <string name="cam_ra_1">Caméra 1</string>
+    <string name="cam_ra_2">Caméra 2</string>
+    <string name="lumi_re_1">Lumière 1</string>
+    <string name="localisation">Localisation</string>
+    <string name="enregister_scenario">Enregister scénario</string>
+    <string name="duree">Durée</string>
+    <string name="temps">Temps</string>
+    <string name="ajouter_au_scenario">Ajouter au scénario</string>
+    <string name="deroulement_du_scenario">Déroulement du scénario</string>
+    <string name="emplacements">Emplacements</string>
+    <string name="exterieur_etages">Extérieur/Etages</string>
+    <string name="equipements">Equipements</string>
+    <string name="action">Action</string>
+    <string name="logo">logo</string>
+    <string name="textview">TextView</string>
+    <string name="testt">TODO</string>
+    <string name="server_name">Server name</string>
+    <string name="enter_ip">Enter IP</string>
+    <string name="statistiques">Statistiques</string>
+    <string name="mosa_que_cam_ras">mosaïque caméras</string>
+    <string name="pilotage_cam_ras">Pilotage Caméras</string>
+    <string name="sc_nario_domotique">Scénario Domotique</string>
+    <string name="pilotage_maison">Pilotage Maison</string>
+    <string name="support">support</string>
+    <string name="option_serveur">option serveur</string>
+    <string name="option">option</string>
+    <string name="action_lights_floor">Piloter les lumières</string>
+    <string name="action_shutters_floor">Piloter les volets</string>
+    <string name="action_ac_floor">Piloter les climatisations</string>
+    <string name="action_lights_room">Piloter les lumières</string>
+    <string name="action_shutters_room">Piloter les volets</string>
+    <string name="action_ac_room">Piloter les climatisations</string>
+    <string-array name="actions">
+        <item>Eteindre</item>
+        <item>Allumer</item>
+    </string-array>
+
+    <string-array name="etages">
+        <item>Extérieur</item>
+        <item>Rez-de-chaussée</item>
+        <item>Premier étage</item>
+    </string-array>
+
+    <string-array name="equipements">
+        <item>Something</item>
+    </string-array>
+
+
+    <string-array name="pieces">
+        <item>Something</item>
+    </string-array>
+
+
+    <string-array name="temps">
+        <item>something</item>
+    </string-array>
 </resources>

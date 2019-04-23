@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Switch;
 
 import com.ironsecurity.database.DatabaseHelper;
@@ -21,13 +22,13 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         EditText editTextUsername;
         EditText editTextPassword;
         Switch switchRememberMe;
+        ImageButton buttonOption;
+        ImageButton buttonSupport;
 
         public static final String PREFS_NAME = "MyPrefsFile";
         private static final String PREF_USERNAME = "savusername";
         private static final String PREF_PASSWORD = "savpassword";
-        static public CClient clientThread;
 
-        Thread thread;
 
         /** Called when the activity is first created. */
         @Override
@@ -35,19 +36,33 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            //Création du client qui se chargera d'envoyer les messages au serveur java
-            clientThread = new CClient();
-            thread = new Thread(clientThread);
-            thread.start();
+            buttonOption = findViewById(R.id.Option);
+            buttonSupport = findViewById(R.id.buttonSupport);
 
             loginButton = findViewById(R.id.buttonLogin);
             editTextUsername = findViewById(R.id.editTextUsername);
             editTextPassword = findViewById(R.id.editTextPassword);
+            switchRememberMe = findViewById(R.id.switchRemember);
+
+            buttonSupport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                    startActivity(intent);
+                }
+            });
+            buttonOption.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, ConfigurationActivity.class);
+                    startActivity(intent);
+                }
+            });
 
             loginButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    changeActivity();
+                    run();
                 }
             });
         }
@@ -57,14 +72,14 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 if(editTextUsername.getText().length()==0)
                 {
 
-                    ShowAlert.displayAlert(this,"Please enter valid Username");
+                    ShowAlert.displayAlert(this,"Nom d'utilisateur incorrect");
                     editTextUsername.requestFocus();
                     return;
                 }
 
                 if(editTextPassword.getText().length()==0)
                 {
-                    ShowAlert.displayAlert(this,"Please enter valid Password");
+                    ShowAlert.displayAlert(this,"Mot de passe incorrect");
                     editTextPassword.requestFocus();
                     return;
                 }
@@ -73,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 String password= editTextPassword.getText().toString();
                 final DatabaseHelper dbHelper = new DatabaseHelper(this);
                 dbHelper.addUser(new User("Admin", "admin"));
+                dbHelper.addUser(new User("Utilisateur", "motdepasse"));
+                dbHelper.addUser(new User("Surveillance", "motdepasse"));
 
 
                 if(switchRememberMe.isChecked())
@@ -89,6 +106,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 if(user != null)
                 {
                     Intent i = new Intent(this, MenuActivity.class); // here the nextpage to be loaded is specified
+                    //TODO Remplacer par une variable de compte utilisateur
+                    i.putExtra("account", user.getId());
                     startActivity(i);
                 }
                 else
@@ -100,9 +119,4 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                 }
             }
 
-        private void changeActivity()
-        {
-                Intent intent = new Intent(this, MenuActivity.class);
-                startActivity(intent);
-        }
 }

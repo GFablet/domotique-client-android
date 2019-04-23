@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bground"
     tools:context=".operate_house.FloorSelectionActivity">
 
     <ImageView
@@ -12,14 +12,12 @@
         android:layout_width="189dp"
         android:layout_height="126dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="111dp"
-        android:layout_marginBottom="525dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoprojetalpha" />
+        app:srcCompat="@drawable/logopr" />
 
     <Button
         android:id="@+id/buttonExterieur"
@@ -27,12 +25,13 @@
         android:layout_height="125dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="55dp"
-        android:layout_marginEnd="49dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_ext"
         android:tag="1"
         android:text="Extérieur"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button1erEtage"
         app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,15 +41,16 @@
         android:id="@+id/buttonRdc"
         android:layout_width="131dp"
         android:layout_height="125dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="345dp"
-        android:background="@drawable/gradientbutton"
+        android:background="@drawable/bg_rdc"
         android:tag="2"
         android:text="Rez de chaussée"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonExterieur"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
@@ -59,13 +59,13 @@
         android:layout_height="125dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="208dp"
-        android:background="@drawable/gradientbutton"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/bg_premier"
         android:tag="3"
         android:text="Premier étage"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        android:textColor="@color/colorDarkBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRdc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonExterieur" />
 </android.support.constraint.ConstraintLayout>

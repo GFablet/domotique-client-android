@@ -1,5 +1,6 @@
 package com.ironsecurity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,29 @@ public class MenuActivity extends AppCompatActivity {
         buttonMosaique = findViewById(R.id.buttonMosaiqueCameras);
         buttonStatistiques = findViewById(R.id.buttonStatistiques);
 
+        //On récupère le type de compte utilisateur
+        Intent mainIntent = getIntent();
+        //Par défaut le compte est réglé sur utilisateur restreint
+        int account = mainIntent.getIntExtra("account", 3);
+        //On met en place les différents intent de changement d'activité
+        Intent intentMaison = new Intent(MenuActivity.this, FloorSelectionActivity.class);
+        Intent intentScenarios = new Intent(MenuActivity.this, ScenariosActivity.class);
+        Intent intentMosaique = new Intent(MenuActivity.this, MosaicCamerasActivity.class);
+        Intent intentCamera = new Intent(MenuActivity.this, CameraActivity.class);
+        Intent intentStatistiques = new Intent(MenuActivity.this, StatistiquesActivity.class);
+
+        if(account != 3)
+        {
+            changeActivityOnClick(buttonMaison, intentMaison);
+            changeActivityOnClick(buttonScenarios, intentScenarios);
+            changeActivityOnClick(buttonCameras, intentCamera);
+            changeActivityOnClick(buttonStatistiques, intentStatistiques);
+        }
+
+        changeActivityOnClick(buttonMosaique, intentMosaique);
+
+
+        /*
         buttonMaison.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +90,16 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this, ScenariosActivity.class);
+                startActivity(intent);
+            }
+        });*/
+    }
+
+    private void changeActivityOnClick(Button button, final Intent intent)
+    {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(intent);
             }
         });

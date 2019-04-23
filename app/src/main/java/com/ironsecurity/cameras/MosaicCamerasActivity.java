@@ -13,6 +13,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 //public class MosaicCamerasActivity extends AppCompatActivity {
+    WebView camera1;
+    WebView camera2;
+    WebView camera3;
+    WebView camera4;
 
 
   //  WebView camera1;

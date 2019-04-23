@@ -4,77 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient">
+    android:background="@drawable/bground">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="339dp"
         android:layout_height="505dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="187dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:tag="43"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/salon" />
 
-    <Button
-        android:id="@+id/buttonLumiere1"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe1"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/cercle"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
         android:tag="39"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere_carree"
+        android:tag="37"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.293" />
 
-    <Button
-        android:id="@+id/buttonLumiere8"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe3"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/lampe_carree_off"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="43"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.296" />
+        app:layout_constraintVertical_bias="0.293" />
 
-    <Button
-        android:id="@+id/buttonLumiere2"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe4"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/cercle"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="148dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="44"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
-    <Button
-        android:id="@+id/buttonLumiere3"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe8"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/cercle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.761" />
-
-    <Button
-        android:id="@+id/buttonLumiere4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/cercle"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="40"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.831"
@@ -82,79 +92,91 @@
         app:layout_constraintTop_toTopOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.186" />
 
-    <Button
-        android:id="@+id/buttonLumiere5"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe5"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/cercle"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="41"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.643" />
 
-    <Button
-        android:id="@+id/buttonLumiere6"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe6"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/cercle"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere"
+        android:tag="42"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="0.994" />
 
-    <Button
-        android:id="@+id/buttonLumiere7"
+    <CheckBox
+        android:id="@+id/checkBoxSalonLampe7"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/lampe_carree_off"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.73" />
-
-    <Button
-        android:id="@+id/buttonClim"
-        android:layout_width="60dp"
-        android:layout_height="38dp"
-        android:background="@drawable/demicercle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.486" />
-
-    <Button
-        android:id="@+id/buttonVolet1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/triangle"
-        android:tag="190"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.95" />
-
-    <Button
-        android:id="@+id/buttonVolet2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/triangle"
-        android:tag="189"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_lumiere_carree"
+        android:tag="38"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.968" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSalonClim"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="94dp"
+        android:button="@drawable/radio_selector_clim"
+        android:tag="143"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSalonVolet1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="24dp"
+        android:button="@drawable/radio_selector_volet"
+        android:tag="190"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSalonVolet2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="12dp"
+        android:button="@drawable/radio_selector_volet"
+        android:tag="189"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <RadioButton
         android:id="@+id/radioButton"

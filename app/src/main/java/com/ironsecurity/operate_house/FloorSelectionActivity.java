@@ -3,12 +3,18 @@ package com.ironsecurity.operate_house;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
 import com.ironsecurity.R;
 
 public class FloorSelectionActivity extends AppCompatActivity implements View.OnClickListener {
+
+    //TODO A récupérer de la BDD
+    static final String EXTERIEUR_ID = "1";
+    static final String RDC_ID = "2";
+    static final String PREMIER_ID = "3";
 
     Button buttonExterieur;
     Button buttonRDC;
@@ -20,7 +26,7 @@ public class FloorSelectionActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_selection);
 
-        buttonExterieur = findViewById(R.id.buttonPilotageMaison);
+        buttonExterieur = findViewById(R.id.buttonExterieur);
         buttonRDC = findViewById(R.id.buttonRdc);
         button1erEtage = findViewById(R.id.button1erEtage);
 
@@ -37,4 +43,6 @@ public class FloorSelectionActivity extends AppCompatActivity implements View.On
         intent.putExtra("layout", FloorsID[Integer.parseInt(v.getTag().toString())]);
         startActivity(intent);
     }
+
+
 }
