@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,9 +6,9 @@
     tools:context=".MainActivity">
 
     <pl.droidsonroids.gif.GifImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bga_sky" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bga_sky" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -32,9 +31,7 @@
         android:layout_marginStart="121dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="121dp"
-        android:layout_marginBottom="100dp"
         android:contentDescription="Logo"
-        app:layout_constraintBottom_toTopOf="@+id/editTextUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -73,21 +70,17 @@
         android:id="@+id/editTextUsername"
         android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="57dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="100dp"
         android:background="#11000000"
-        android:drawableLeft="@drawable/ic_action_username"
+
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:textAllCaps="false"
         android:textColor="@color/colorDarkBlue"
-<<<<<<< HEAD
-        android:textColorHint="#DFAF2C"
-=======
         android:textColorHint="@color/colorLightBlue"
->>>>>>> dev-interface
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,16 +90,15 @@
         android:id="@+id/editTextPassword"
         android:layout_width="300dp"
         android:layout_height="45dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginStart="98dp"
         android:layout_marginTop="24dp"
-        android:layout_marginRight="57dp"
+        android:layout_marginEnd="100dp"
         android:background="#11000000"
-        android:drawableLeft="@drawable/ic_action_password"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="@color/colorDarkBlue"
-        android:textColorHint="#DFAF2C"
+        android:textColorHint="@color/colorLightBlue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,11 +122,9 @@
         android:id="@+id/switchRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="128dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textRemember"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
 </android.support.constraint.ConstraintLayout>

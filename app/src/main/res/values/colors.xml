@@ -2,14 +2,8 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-<<<<<<< HEAD
-    <color name="colorAccent">#FFA500</color>
-    <color name="colorDarkBlue">#FFFFFF</color>
-    <color name="colorLightBlue">#FFA500</color>
-=======
     <color name="colorAccent">#D81B60</color>
     <color name="colorDarkBlue">#3F399F</color>
     <color name="colorLightBlue">#6898FF</color>
->>>>>>> dev-interface
     <color name="colorY">#FFA500</color>
 </resources>

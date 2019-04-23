@@ -34,10 +34,10 @@ public class OperateCamerasActivity extends AppCompatActivity {
         webViewCamera = findViewById(R.id.webView);
         webViewCamera.loadUrl(cameraIP + "/video.cgi");
 
-        btnUp = findViewById(R.id.imageButtonCameraUp);
-        btnDown = findViewById(R.id.imageButtonCameraDown);
-        btnLeft = findViewById(R.id.imageButtonCameraLeft);
-        btnRight = findViewById(R.id.imageButtonCameraRight);
+        btnUp = findViewById(R.id.btnUp);
+        btnDown = findViewById(R.id.btnDown);
+        btnLeft = findViewById(R.id.btnLeft);
+        btnRight = findViewById(R.id.btnRight);
 
         urlUp = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=1";
         urlDown = cameraIP + "/pantiltcontrol.cgi?PanSingleMoveDegree=5&TiltSingleMoveDegree=5&PanTiltSingleMove=7";
