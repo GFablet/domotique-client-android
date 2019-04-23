@@ -60,9 +60,9 @@ public class RoomActivity extends AppCompatActivity {
 
             final CheckBox checkBox = findViewById(clim);
             //TODO trouver une autre façon de changer d'icône
-            if(AC_MODE.equals("0"))
+            if(AC_MODE.equals("0") && RoomSelectionActivity.AC_ON)
                 checkBox.setButtonDrawable(R.drawable.clim_froid);
-            else
+            else if(RoomSelectionActivity.AC_ON)
                 checkBox.setButtonDrawable(R.drawable.clim_chaud);
             checkBox.setChecked(RoomSelectionActivity.AC_ON);
 

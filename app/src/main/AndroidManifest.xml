@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".scenarios.CreateScenarioActivity"></activity>
         <activity android:name=".AboutActivity"></activity>
         <activity android:name=".StatistiquesActivity" />
         <activity android:name=".scenarios.CreateScenarioActivity" />
